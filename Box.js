@@ -9,7 +9,12 @@ class Box{
         this.visibility=255;
         World.add(myWorld,this.body);
     }
-display(){ 
+    score(){
+        if(this.visibility<0 && this.visibility>-10){
+            score++;
+        }
+    }
+    display(){ 
     if(this.body.speed<2){
         var angle = this.body.angle; 
         var pos= this.body.position; 
